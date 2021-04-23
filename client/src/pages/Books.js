@@ -76,22 +76,22 @@ function Books() {
 
     let save = books.filter((book) => book.id === event.target.id);
     console.log(save);
-    const data = {
+    // const da/ta = ;
+
+    // console.log(data);
+    API.saveBook({
       title: save[0].title,
       authors: save[0].author,
       description: save[0].description,
       image: save[0].image,
-    };
-
-    console.log(data);
-    API.saveBook(data)
+    })
       .then((res) => {
         alert("book saved");
         console.log(res);
-        console.log(data);
+        // console.log(data);
       })
       .catch((err) => {
-        console.log(data);
+        // console.log(data);
         console.log("book not saved");
         console.log(err.response.data.error);
       });
