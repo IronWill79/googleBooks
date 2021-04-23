@@ -2,6 +2,9 @@ import axios from "axios";
 
 export default {
     // Gets all books
+    saveBook: function(book) {
+        return axios.post("/api/books", book);
+    },
     googlebooks: function(query) {
         return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
     },
@@ -17,7 +20,4 @@ export default {
         return axios.delete("/api/books/" + id);
     },
     // Saves a book to the database
-    saveBook: function(bookData) {
-        return axios.post("/api/books", bookData);
-    },
 };
