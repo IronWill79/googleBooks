@@ -3,6 +3,7 @@ import axios from "axios";
 export default {
     // Gets all books
     saveBook: function(book) {
+        console.log("utils", book);
         return axios.post("/api/books", book);
     },
     googlebooks: function(query) {
