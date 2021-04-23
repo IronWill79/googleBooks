@@ -80,7 +80,7 @@ function Books() {
       title: save[0].title,
       author: save[0].author,
       description: save[0].description,
-      image: save[0].image ? save[0].image : "#",
+      image: save[0].image,
     };
 
     console.log(data);
@@ -88,8 +88,10 @@ function Books() {
       .then((res) => {
         alert("book saved");
         console.log(res);
+        console.log(data);
       })
       .catch((err) => {
+        console.log(data);
         console.log("book not saved");
         console.log(err);
       });
