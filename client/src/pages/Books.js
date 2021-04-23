@@ -93,7 +93,7 @@ function Books() {
       .catch((err) => {
         console.log(data);
         console.log("book not saved");
-        console.log(err.resonse.data.error);
+        console.log(err.response.data.error);
       });
   };
 
