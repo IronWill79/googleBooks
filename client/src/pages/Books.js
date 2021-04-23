@@ -75,7 +75,7 @@ function Books() {
     event.preventDefault();
 
     let save = books.filter((book) => book.id === event.target.id);
-    console.log(save);
+    // console.log(save);
     // const da/ta = ;
 
     // console.log(data);
