@@ -78,9 +78,9 @@ function Books() {
     console.log(save);
     const data = {
       title: save[0].title,
-      author: "save[0].author",
+      author: save[0].author ? "new" : "old",
       description: save[0].description,
-      image: save[0]?.image,
+      image: save[0].image ? save[0].image : "#",
     };
     console.log(data);
     API.saveBook(data)
